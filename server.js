@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 
-const count = 0;
+let count = 0;
 app.get("/", (req, res) => {
   count++;
-  res.send(`Hello, World!, visited ${count} ${count ? "times" : "time"}`);
+  res.send(`Hello, World!, visited ${count} ${count > 1 ? "times" : "time"}`);
 });
 
 const port = 5001;
